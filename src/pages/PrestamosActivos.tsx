@@ -4,6 +4,7 @@ import { hoyISO } from "../utils/fechas";
 interface PrestamosActivosProps {
   prestamos: Prestamo[];
   equipos: Equipo[];
+  devolviendoId: number | null;   // nuevo
   onDevolver: (prestamoId: number) => void;
 }
 

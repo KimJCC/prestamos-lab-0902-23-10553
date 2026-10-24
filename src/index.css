@@ -129,3 +129,4 @@ code {
 .tabla { width: 100%; border-collapse: collapse; }
 .tabla th, .tabla td { border: 1px solid #888; padding: 8px; text-align: left; }
 .tabla tr.vencido { background: #7a1f1f; color: #fff; }
+.error-api { border: 1px solid #c62828; border-radius: 8px; padding: 16px; max-width: 480px; }

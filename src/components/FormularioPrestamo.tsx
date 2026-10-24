@@ -6,6 +6,8 @@ import { hoyISO, sumarDias } from "../utils/fechas";
 
 interface FormularioPrestamoProps {
   equipo: Equipo;
+  enviando: boolean;            // nuevo
+  errorEnvio: string | null;    // nuevo
   onGuardar: (datos: DatosPrestamo) => void;
   onCancelar: () => void;
 }
@@ -21,6 +23,8 @@ const REGEX_CARNE = /^\d{4}-\d{2}-\d{5}$/;
 
 export default function FormularioPrestamo({
   equipo,
+  enviando,
+  errorEnvio,
   onGuardar,
   onCancelar,
 }: FormularioPrestamoProps) {
@@ -125,9 +129,13 @@ export default function FormularioPrestamo({
             </label>
           )}
 
+          {errorEnvio && <p className="error">{errorEnvio}</p>}
+
           <div className="acciones">
-            <button type="button" onClick={onCancelar}>Cancelar</button>
-            <button type="submit">Guardar</button>
+            <button type="button" onClick={onCancelar} disabled={enviando}>Cancelar</button>
+            <button type="submit" disabled={enviando}>
+             {enviando ? "Guardando..." : "Guardar"}
+            </button>
           </div>
         </form>
       </div>
