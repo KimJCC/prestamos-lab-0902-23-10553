@@ -15,3 +15,10 @@ export interface Prestamo {
   devuelto: boolean;
   curso?: string;        // solo para Arduino (tu regla adicional)
 }
+
+export interface DatosPrestamo {
+  solicitante: string;
+  carne: string;
+  fechaLimite: string;
+  curso?: string;
+}
