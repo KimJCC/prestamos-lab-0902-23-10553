@@ -13,7 +13,7 @@ git clone https://github.com/KimJCC/prestamos-lab-0902-23-10553.git
 cd prestamos-lab-0902-23-10553
 npm install
 ```
-Copie `.env.example` a `.env`
+Copie `VITE_API_URL=http://localhost:3001` a  `.env.example`
 
 ## Ejecución
 En una terminal, levantar la API:
